@@ -7,7 +7,7 @@ import { DataService } from 'src/app/services/data.service';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-  items!:string[]; //sera donde almacenemos los datos recibidos del servicio
+  items!:any[]; //sera donde almacenemos los datos recibidos del servicio
   constructor(private data:DataService) { } //private porque sera accesible solo aquí
 
   ngOnInit(): void {
