@@ -1,1 +1,20 @@
-<p>detalle works!</p>
+<div class="block p-6 rounded-lg shadow-lg bg-white max-w-sm mx-auto mt-10">
+    <h1 class="text-center text-2xl font-bold">Item NRO: {{id}}</h1> <!--El código cambia de acuerdo al Item Seleccionado-->
+    <form>
+        <div class="form-group mb-6 mt-5">
+            <div> <!--Como solo se almacena un Objeto en el indice 0, recorro el producto y lo asigno al formulario-->
+                <label for="id" class="form-label capitalize inline-block mb-2 text-gray-700">User ID:</label>
+                <input type="text" [(ngModel)]="itemDetalle.userId" name="userId" id="id" class="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none">
+                <label for="descripcion" class="form-label capitalize inline-block mb-2 text-gray-700">ID:</label>
+                <input type="text" [(ngModel)]="itemDetalle.id" name="id" id="descripcion" class="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none">
+                <label for="compra" class="form-label capitalize inline-block mb-2 text-gray-700">Title:</label>
+                <input type="text" [(ngModel)]="itemDetalle.title" name="title" id="compra" class="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none">
+                <label for="venta" class="form-label capitalize inline-block mb-2 text-gray-700">Completed:</label>
+                <input type="text" [(ngModel)]="itemDetalle.completed" name="completed" id="venta" class="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none">
+            </div>
+        </div>
+        <div class="form-group mt-5 flex items-center">
+            <a [routerLink]="['/']" routerLinkActive="active" ariaCurrentWhenActive="page" [routerLinkActiveOptions]="{exact: true}" class="w-full px-6 py-2.5 bg-blue-600 text-white text-center font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">Retornar</a>
+        </div>
+    </form>
+</div>

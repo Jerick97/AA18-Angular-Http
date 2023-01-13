@@ -14,4 +14,7 @@ export class DataService {
   getData():Observable<string[]>{
     return this.http.get<string[]>(this.urlAPI);
   }
+  getItem(id: number): Observable<any> {
+    return this.http.get(`${this.urlAPI}/${id}`);
+  }
 }
